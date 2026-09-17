@@ -5,7 +5,7 @@ generated and refreshed by machine; do not edit its contents by hand.
 
 ## What is here
 
-Source: `every bundle on the EN game server that is not audio and not already text`.
+Source: `dyn/**` bundle on the EN game server that is not audio and not already text.
 
 Mirrors the game's own `dyn/` tree, so paths match the container names inside the bundles:
 
@@ -34,8 +34,8 @@ Run it locally:
 
 ```bash
 python -m pip install "arkprts[all]" lameenc
-python tools/assets_sync.py --out . --state .state
-python tools/assets_sync.py --verify --out .
+python tools/assets_sync.py --out . --flat --state .state
+python tools/assets_sync.py --verify --out . --flat
 ```
 
 `tools/assets_sync.py` in this repository is a self-contained copy whose default group is
